@@ -1,0 +1,24 @@
+[Unit]
+Description=TVProxy — Brazilian TV streaming proxy
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tvproxy
+WorkingDirectory=/opt/tvproxy
+ExecStart=/opt/tvproxy/venv/bin/python app.py --host 0.0.0.0 --port 5000
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+Environment=PYTHONUNBUFFERED=1
+
+# Security hardening
+PrivateTmp=true
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/tvproxy
+
+[Install]
+WantedBy=multi-user.target
