@@ -8,8 +8,8 @@ set -euo pipefail
 INSTALL_DIR="/opt/tvproxy"
 SERVICE_USER="tvproxy"
 SERVICE_FILE="/etc/systemd/system/tvproxy.service"
-REPO_URL="https://github.com/jeanfraga95/canais"
-PORT=5000
+REPO_URL="https://github.com/jeanfraga95/canaistv"
+PORT=5050
 NO_SERVICE=false
 LOG_FILE="/var/log/tvproxy-install.log"
 
