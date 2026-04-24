@@ -16,7 +16,7 @@ from channels import CHANNELS, CHANNELS_BY_ID
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 
-PORT = 5000
+PORT = 5050
 HOST = "0.0.0.0"
 CACHE_TTL = 300          # seconds before re-extracting m3u8 (5 min)
 EXTRACT_TIMEOUT = 15     # seconds to wait for iframe scrape
